@@ -84,6 +84,32 @@ $(document).ready(function(){
      }
   }
 
+  // call render tweets function
  renderTweets(tweetData);
+
+
+ // function subdmitNewTweet() {
+ //  $('#new-tweet-form').on('submit', (event) =>) {
+ //    event.preventDefault();
+ //    $(this).serialize();
+ //    //console.log( $( this ).serialize() );
+ //  }
+
+// function works
+ function loadTweets(){
+    $.ajax({
+      data: tweets,
+      dataType: 'json',
+      url: '/tweets'
+      })
+      .done((data) => {
+        //if success
+        renderTweets(data);
+      })
+      .fail((error) => {
+        //if fail
+        console.error(error);
+      });
+    }
 });
 
