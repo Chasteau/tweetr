@@ -6,7 +6,7 @@ $(document).ready( function(){
        .css({"border": "1px solid black", });
        $("header h2")
        .css({"color": "black"});
-       $("header i")
+       $("header img")
        .css({"opacity": "1"});
        $("footer i")
        .css({"visibility": "visible", });
@@ -17,7 +17,7 @@ $(document).ready( function(){
        .css({"border": "1px solid #ddd", });
        $("header h2")
        .css({"color": "gray"});
-       $("header i")
+       $("header img")
        .css({"opacity": "0.5"});
        $("footer i")
        .css({"visibility": "hidden", });
