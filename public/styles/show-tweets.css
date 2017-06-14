@@ -1,24 +1,25 @@
 /*main wrapper*/
 section#all-tweets {
     width: 100%;
-    max-height: 150px;
+    height: 150px;
     max-width: 390px;
     margin: 20px auto;
-    border: 1px solid gray;
-    border-radius: 3px;
 }
 /*main flex container*/
 article.flex-container {
   display: flex;
-  max-height: 150px;
+  min-height: 150px;
   flex-wrap: wrap;
   flex-flow: column;
   background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+
 }
 /*flex container*/
 header.header-flex {
   display: flex;
-  height: 50px;
+  height: 55px;
   background: #f5f5f5;
   justify-content: center;
 }
@@ -27,16 +28,18 @@ header img {
   border-radius: 5px;
   height: 40px;
   width: 15%;
-  margin: 5px 5px 0 5px;
+  margin: 5px 0 0 10px;
 }
 
 header h2 {
+  color: gray;
   width: 80%;
   margin: 5px auto;
   padding-left: 10px
 }
 
 header h3 {
+  color: gray;
   font-weight: normal;
   font-size: 12pt;
   align-content: center;
@@ -46,13 +49,14 @@ header h3 {
 /*flex container*/
 div.tweet-body {
   display: flex;
-  height: 70px;
+  height: 65px;
 }
 
 div p {
+  font-size: 13pt;
   flex-grow: 1;
   align-content: center;
-  margin-left: 5px;
+  margin: 20px 0 0 10px;
 }
 
 
@@ -60,16 +64,13 @@ div p {
 footer.footer-flex {
   display: flex;
   height: 30px;
-  border-top: 1px solid gray;
-  border-bottom: 1px solid gray;
-  border-bottom-right-radius: : 3px;
-   border-bottom-left-radius: : : 3px;
+  border-top: 1px solid #f5f5f5;
 }
 
 footer span.date {
   font-weight: normal;
   font-size: 10pt;
-  margin: 10px 0 5px 5px;
+  margin: 8px 0 5px 5px;
 }
 
 
