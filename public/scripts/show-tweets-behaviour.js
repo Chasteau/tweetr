@@ -10,8 +10,7 @@ $(document).ready( function(){
        .css({"opacity": "1"});
        $("footer i")
        .css({"visibility": "visible", });
-    }
-  ))// reset changes css styles to display incons off hover
+    }))// reset changes css styles to display off hover
    .on("mouseout", (() => {
      $("article.flex-container")
        .css({"border": "1px solid #ddd", });
@@ -21,6 +20,5 @@ $(document).ready( function(){
        .css({"opacity": "0.5"});
        $("footer i")
        .css({"visibility": "hidden", });
-   }
-  ))
+   }))
 });

@@ -15,7 +15,19 @@ article.flex-container {
   background-color: white;
   border: 1px solid #ddd;
   border-radius:5px;
+}
 
+article:hover {
+  border: 1px solid black;
+}
+article:hover h2 {
+  color: black;
+}
+article:hover  img {
+  opacity: 1;
+}
+article:hover footer i {
+  visibility: visible;
 }
 
 /*flex container*/
