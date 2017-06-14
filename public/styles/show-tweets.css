@@ -13,9 +13,10 @@ article.flex-container {
   flex-flow: column;
   background-color: white;
   border: 1px solid #ddd;
-  border-radius: 3px;
+  border-radius:5px;
 
 }
+
 /*flex container*/
 header.header-flex {
   display: flex;
@@ -26,6 +27,7 @@ header.header-flex {
 
 header img {
   border-radius: 5px;
+  opacity: 0.5;
   height: 40px;
   width: 15%;
   margin: 5px 0 0 10px;
@@ -68,9 +70,20 @@ footer.footer-flex {
 }
 
 footer span.date {
+  width: 80%;
   font-weight: normal;
   font-size: 10pt;
   margin: 8px 0 5px 5px;
+}
+
+footer img {
+  visibility: hidden;
+  flex-grow: 1;
+  align-self: center;
+  margin-right:5px;
+  border-radius: 5px;
+  height: 20px;
+  width: 5%;
 }
 
 
