@@ -85,31 +85,38 @@ $(document).ready(function(){
   }
 
   // call render tweets function
- renderTweets(tweetData);
+ // renderTweets(tweetData);
 
-
- // function subdmitNewTweet() {
- //  $('#new-tweet-form').on('submit', (event) =>) {
- //    event.preventDefault();
- //    $(this).serialize();
- //    //console.log( $( this ).serialize() );
- //  }
-
-// function works
- function loadTweets(){
+function submitTweet() {
+  let form = $("#new-tweet-form");
+  form.on("submit", ((event) => {
+    event.preventDefault();
     $.ajax({
-      data: tweets,
-      dataType: 'json',
-      url: '/tweets'
+      data: form.serialize(),
+      url: form.attr('action'),
+      type: form.attr('method'),
+    })
+    .done((data) => {
+      console.log(data);
+      console.log('Submission was success.');
+    })
+    .fail(console.error);
+  }));
+}
+
+
+// fetch tweets from db
+ function loadTweets(cb){
+    $.ajax({
+      method: "GET",
+      url: '/tweets/'
       })
-      .done((data) => {
-        //if success
-        renderTweets(data);
-      })
-      .fail((error) => {
-        //if fail
-        console.error(error);
-      });
+      .done(cb)
+      .fail(console.error);
     }
+
+loadTweets(renderTweets);
+submitTweet();
+
 });
 

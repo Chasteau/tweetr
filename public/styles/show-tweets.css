@@ -7,6 +7,7 @@ section#tweets-container {
 }
 /*main flex container*/
 article.flex-container {
+  margin-bottom: 10px;
   overflow: auto;
   display: flex;
   min-height: 150px;
