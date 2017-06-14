@@ -20,23 +20,9 @@ const tweetData = {
   },
     "created_at": 1461116232227
   }
-// <article class = "flex-container">
-//           <header class = "header-flex">
-//             <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
-//             <h2>Super David</h2>
-//             <h3> @SprDavid</h3>
-//           </header>
-//           <div class ="tweet-body"><p>This is a tweet</p></div>
-//           <footer class="footer-flex" >
-//             <span class="date">10 days ago</span>
-//             <i class="fa fa-flag" aria-hidden="true"></i>
-//             <i class="fa fa-retweet" aria-hidden="true"></i>
-//             <i class="fa fa-heart" aria-hidden="true"></i>
-//           </footer>
-//         </article>
 
 $(document).ready(function(){
-  // console.log("I am working");
+
   function createTweetElement(tweet) {
     let $tweet = $(
       `<article class="flex-container">
@@ -54,16 +40,23 @@ $(document).ready(function(){
         </footer>
       </article> `
     );
-  // .appendTo("section#all-tweets");
     return $tweet;
   }
 
+  function renderTweets(tweets){
+     // loops through tweets
+     for(var tweet of tweets) {
+      // calls createTweetElement for each tweet
+      // takes return value and appends it to the tweets container
+      $(createTweetElement(tweet)).appendTo("#tweets-container");
+      // $("tweets-container").append(createTweetElement(tweet));
+     }
+  }
 
-// Test / driver code (temporary)
-let $tweet = createTweetElement(tweetData);
-console.log($tweet); // to see what it looks like
-$('#all-tweets').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
-
-
+  // Test / driver code (temporary)
+  // let $tweet = createTweetElement(tweetData);
+  // console.log($tweet); // to see what it looks like
+  // $("tweets-container").append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+  renderTweets([tweetData]);
 });
 
