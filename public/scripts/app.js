@@ -68,7 +68,7 @@ $(document).ready(function(){
         </header>
         <div class ="tweet-body"><p>${tweet.content.text}</p></div>
         <footer class="footer-flex" >
-          <span class="time-to-date">${tweet.created_at}</span>
+          <span class="date">${new Date(tweet.created_at)}</span>
           <i class="fa fa-flag" aria-hidden="true"></i>
           <i class="fa fa-retweet" aria-hidden="true"></i>
           <i class="fa fa-heart" aria-hidden="true"></i>

@@ -32,3 +32,20 @@ nav {
   font-size: 2em;
 
 }
+
+#compose-btn {
+  width: 150px;
+  font-size: 20px;
+  height: 50px;
+  opacity: .5;
+  color: black;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: white;
+  float: right;
+  margin: 15px 0 0 0;
+}
+
+#compose-btn:hover {
+  opacity: 1;
+}

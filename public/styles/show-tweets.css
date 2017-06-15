@@ -75,7 +75,6 @@ div p {
   margin: 20px 0 0 10px;
 }
 
-
 /*flex-container*/
 footer.footer-flex {
   display: flex;
@@ -94,7 +93,7 @@ footer i {
   color: #3ed8be;
   visibility: hidden;
   flex-grow: 1;
-  align-self: center;
+  align-self: right;
 }
 
 
