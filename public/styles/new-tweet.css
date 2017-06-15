@@ -31,10 +31,6 @@ main section.new-tweet h2 {
 }
 
 
-main section form {
-
-}
-
 form textarea {
   width: 100%;
   float:left;
@@ -57,4 +53,12 @@ form span {
 span.counter {
   font-style: italic;
   font-size: 10pt;
+}
+
+#error-message {
+  visibility: hidden;
+  color:  red;
+  font-weight: bold;
+  float: left;
+  margin-left: 60px;
 }

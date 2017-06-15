@@ -3,6 +3,11 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
+ // Import counter function from scripts
+ // const counter = require(counter);
+
+
 // Test / driver code (temporary).
 // Eventually will get this from the server.
 // const tweetData = [
@@ -100,19 +105,42 @@ $(document).ready(function(){
     }
 
 //
-function submitTweet(cb) {
+function submitTweet() {
   let form = $("#new-tweet-form");
+
   form.on("submit", ((event) => {
     event.preventDefault();
-    $.ajax({
-      data: form.serialize(),
-      url: form.attr('action'),
-      type: form.attr('method'),
-    })
-    .done((data) => {
-      renderTweets(data);
-    })
-    .fail(console.error);
+    if($("#tweet-input").val().length > 1
+      && (!($("#tweet-input") == null))
+      && $("#tweet-input").val().length < 140)  {
+      $.ajax({
+        data: form.serialize(),
+        url: form.attr('action'),
+        type: form.attr('method'),
+        })
+        .done((data) => {
+          ;console.log("Sucess this ran");
+          renderTweets(data);
+        })
+        .fail(console.error);
+      // check if the length of the input is greater than max char counter
+      // then render an error message by creating the html string
+      } else if($("#tweet-input").val().length >= 140) {
+          console.log("Greater than 140");
+          $("#error-message").css({"visibility": "visible"});
+        //else condition failed so show error message
+
+        // #error-message {
+    //   visibility: hidden;
+    //   color:  red;
+    //   font-weight: bold;
+    //   float: left;
+    //   margin-left: 60px;
+    // }
+      } else {
+        console.log("Else");
+        // $().appendTo();
+      }
   }));
 }
 
