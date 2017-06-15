@@ -7,7 +7,6 @@
  // Import counter function from scripts
  // const counter = require(counter);
 
-
 // Test / driver code (temporary).
 // Eventually will get this from the server.
 // const tweetData = [
@@ -69,7 +68,7 @@ $(document).ready(function(){
         </header>
         <div class ="tweet-body"><p>${tweet.content.text}</p></div>
         <footer class="footer-flex" >
-          <span class="date">${tweet.created_at}</span>
+          <span class="time-to-date">${tweet.created_at}</span>
           <i class="fa fa-flag" aria-hidden="true"></i>
           <i class="fa fa-retweet" aria-hidden="true"></i>
           <i class="fa fa-heart" aria-hidden="true"></i>
@@ -80,19 +79,14 @@ $(document).ready(function(){
   }
 
   function renderTweets(tweets){
-     // loops through tweets
+     // loops through tweets in reverse
      for (var i = tweets.length -1; i >= 0; i--) {
       let currTweet = tweets[i];
       // calls createTweetElement for each tweet
       // takes return value and appends it to the tweets container
       $(createTweetElement(currTweet)).prependTo("#tweets-container");
-      // $("tweets-container").append(createTweetElement(tweet));
      }
   }
-
-  // call render tweets function
- // renderTweets(tweetData);
-
 
 // fetch tweets from db
  function loadTweets(cb){
@@ -113,33 +107,24 @@ function submitTweet() {
     if($("#tweet-input").val().length > 1
       && (!($("#tweet-input") == null))
       && $("#tweet-input").val().length < 140)  {
+      $("#error-message").css({"visibility": "hidden"});
       $.ajax({
         data: form.serialize(),
         url: form.attr('action'),
         type: form.attr('method'),
         })
         .done((data) => {
-          ;console.log("Sucess this ran");
           renderTweets(data);
         })
         .fail(console.error);
       // check if the length of the input is greater than max char counter
       // then render an error message by creating the html string
       } else if($("#tweet-input").val().length >= 140) {
-          console.log("Greater than 140");
           $("#error-message").css({"visibility": "visible"});
-        //else condition failed so show error message
-
-        // #error-message {
-    //   visibility: hidden;
-    //   color:  red;
-    //   font-weight: bold;
-    //   float: left;
-    //   margin-left: 60px;
-    // }
+          $("#error-message").html("To many words in this tweet!");
       } else {
-        console.log("Else");
-        // $().appendTo();
+          $("#error-message").css({"visibility": "visible"});
+          $("#error-message").html("Add some words to this tweet!");
       }
   }));
 }
