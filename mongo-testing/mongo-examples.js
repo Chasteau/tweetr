@@ -29,10 +29,10 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
 
   getTweets((err, tweets) => {
     if(err) throw err;
-
+    console.log(tweets);
     console.log("looging each tweet:");
     for(let tweet of tweets) {
-      console.log(tweet.content.text);
+      // console.log(tweet);
     }
 
     db.close();
