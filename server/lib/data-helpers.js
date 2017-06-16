@@ -14,13 +14,17 @@ module.exports = function makeDataHelpers(db) {
       })
     },
 
+    // likeTweets: function(tweetId, callback) {
+    //   db.collection("tweets").update()
+    // }
+
     // Get all tweets in `db' in an array
     getTweets: function(callback) {
-        db.collection("tweets").find().toArray((err, tweetsArr) => {
-          if(err) {
-            return callback(err);
-          }
-          callback(null, tweetsArr);
+      db.collection("tweets").find().toArray((err, tweetsArr) => {
+        if(err) {
+          return callback(err);
+        }
+        callback(null, tweetsArr);
       });
     }
   };
