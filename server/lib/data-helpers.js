@@ -14,16 +14,6 @@ module.exports = function makeDataHelpers(db) {
       })
     },
 
-    // likeTweet: function(tweetId, callback) {
-    //   db.collection("tweets").update({
-    //     // add code here to update db with new tweet
-
-    //   }, (err, result)=> {
-    //     if(err) {
-    //       return callbac(err)
-    //     } callback(null, true);
-    //   })
-    // }
 
     // Get all tweets in `db' in an array
     getTweets: function(callback) {

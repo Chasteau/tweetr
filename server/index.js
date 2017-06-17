@@ -1,6 +1,6 @@
 "use strict";
 
-// Basic express setup:
+// Initital express setup and connected to mondoDB
 
 const PORT          = 8080;
 const express       = require("express");
