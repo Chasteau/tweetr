@@ -6,12 +6,8 @@ $(document).ready(function(){
          $("#compose-tweet").slideUp('slow',function(){
           });
         } else {
-<<<<<<< HEAD
           $("#compose-tweet").slideDown('slow',function(){
-=======
-          $("#compose-tweet").slideDown("slow",function(){
             //auto focus on input area
->>>>>>> feature/mongodb
             $("#tweet-input").focus();
           });
         }

@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 
-=======
 // Client-side JS logic
->>>>>>> feature/mongodb
 $(document).ready(function(){
 
   function createTweetElement(tweet) {

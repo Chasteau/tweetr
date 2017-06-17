@@ -7,6 +7,7 @@ $(document).ready(function(){
     if(!clicked) {
       $("#heart").css("color", "red");
       $("#like-counter").css("visibility", "visible");
+    }
 
     // find hidden userID field and use it as data in post request
     // let userID = $(this).parent().parent().find("#hidden-id").text();
