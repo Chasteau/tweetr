@@ -19,3 +19,12 @@ This repository is the starter code for the project: Students will fork and clon
 - MD
 - Chance
 - Body Parser
+
+
+## Screenshots
+
+[![Screen Shot 2017-06-17 at 1.33.33 PM.png](https://s14.postimg.org/ymhe0pihd/Screen_Shot_2017-06-17_at_1.33.33_PM.png)](https://postimg.org/image/gjob9hmml/)
+
+[![Screen Shot 2017-06-17 at 1.34.18 PM.png](https://s16.postimg.org/oerer9ykl/Screen_Shot_2017-06-17_at_1.34.18_PM.png)](https://postimg.org/image/fwhymxs1t/)
+
+[![Screen Shot 2017-06-17 at 1.35.01 PM.png](https://s8.postimg.org/fr828ypr9/Screen_Shot_2017-06-17_at_1.35.01_PM.png)](https://postimg.org/image/askjufly9/)
