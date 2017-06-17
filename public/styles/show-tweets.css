@@ -24,6 +24,9 @@ article:hover {
 article:hover h2 {
   color: black;
 }
+article:hover h3 {
+  color: black;
+}
 article:hover  img {
   opacity: 1;
 }
@@ -57,7 +60,7 @@ header h2 {
 header h3 {
   color: gray;
   font-weight: normal;
-  font-size: 12pt;
+  font-size: 10pt;
   align-content: center;
   margin-right: 10px;
   width: 20%;
@@ -90,12 +93,17 @@ footer span.date {
 }
 
 footer i {
+  margin-top: 4px;
   color: #3ed8be;
   visibility: hidden;
   flex-grow: 1;
   align-self: right;
 }
 
+i#like-counter {
+   color: black;
+  visibility: hidden;
+}
 
 
 
