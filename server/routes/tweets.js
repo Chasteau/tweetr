@@ -17,11 +17,6 @@ module.exports = function(DataHelpers) {
     });
   });
 
-  // // likes endpoint
-  // tweetsRoutes.post(){
-
-  // }
-
   tweetsRoutes.post("/", function(req, res) {
     if (!req.body.text) {
       res.status(400).json({ error: 'invalid request: no data in POST body'});
@@ -45,6 +40,33 @@ module.exports = function(DataHelpers) {
         res.status(201).send([tweet]);
       }
     });
+  });
+
+  tweetsRoutes.post("/likes", function(req, res) {
+
+    console.log(req.params.id);
+  //   if (!req.body.text) {
+  //     res.status(400).json({ error: 'invalid request: no data in POST body'});
+  //     return;
+  //   }
+
+  //   const userID = req.body.user ? req.body.user : userHelper.generateRandomUser();
+  //   const tweet = {
+  //     user: user,
+  //     content: {
+  //       text: req.body.text
+  //     },
+  //     created_at: Date.now(),
+  //     like: 0
+  //   };
+
+  //   DataHelpers.likeTweet(tweet, (err) => {
+  //     if (err) {
+  //       res.status(500).json({ error: err.message });
+  //     } else {
+  //       res.status(201).send([tweet]);
+  //     }
+  //   });
   });
 
   return tweetsRoutes;
